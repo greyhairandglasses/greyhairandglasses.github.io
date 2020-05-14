@@ -1,0 +1,24 @@
+{
+  "name": "github",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gh-pages": "^2.2.0",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greyhairandglasses/greyhairandglasses.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/greyhairandglasses/greyhairandglasses.github.io/issues"
+  },
+  "homepage": "https://github.com/greyhairandglasses/greyhairandglasses.github.io#readme"
+}
