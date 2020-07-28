@@ -3,14 +3,21 @@
   --border-radius: 5px;
   --heading-font: 'Bebas Neue', cursive;
   --main-font: 'Montserrat', sans-serif;
-  --blue: #E63946;
+  --red: #E63946;
   --orange: #FFA630;
-  --red: #005792;
+  --blue: #005792;
+  --l-blue: #3c76b5;
   --light: #F6F6E9;
   --dark: #081621;
+
+  /* Template */
+  --eggshell: hsla(52, 50%, 91%, 1);
+  --terra-cotta: hsla(13, 68%, 63%, 1);
+  --independence: hsla(234, 20%, 30%, 1);
+  --green-sheen: hsla(151, 24%, 60%, 1);
+  --deep-champagne: hsla(37, 79%, 75%, 1);
+
 }
-/* Photo Credit - INCLUDE IN FINAL */
-/* <span>Photo by <a href="https://unsplash.com/@beautyoftechnology?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Nikolay Tarashchenko</a> on <a href="https://unsplash.com/s/photos/laptop?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span> */
 * {
   margin: 0;
   padding: 0;
@@ -29,13 +36,14 @@ body, html {
   top: 0;
   width: 100%;
   height: var(--nav-bar-height);
-  background-color: var(--red);
+  background-color: var(--independence);
+  /* background-color: #000000; */
   z-index: 4;
 }
 
 .nav-items {
   text-decoration: none;
-  color: black;
+  color: var(--eggshell);
   margin: auto 5vw;
   font-family: var(--heading-font);
   font-size: 6vmin;
@@ -44,7 +52,8 @@ body, html {
 .dropdown-nav {
   position: fixed;
   width: 100%;
-  background-color: var(--red);
+  background-color: var(--independence);
+  /* background-color: #000000; */
   z-index: 3;
   text-align: center;
   top: var(--nav-bar-height);
@@ -53,13 +62,13 @@ body, html {
 
 .dropdown-nav a {
   font-family: var(--heading-font);
-  color: var(--dark);
+  color: var(--eggshell);
   font-size: 3vmin;
   padding: 0 1vmin;
 }
 
 .hidden {
-  top: calc(var(--nav-bar-height) - 50px);
+  top: calc(var(--nav-bar-height) - 80px);
 }
 
 
@@ -85,11 +94,24 @@ body, html {
   ". text ."
   ". . .";
   margin-top: var(--nav-bar-height);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('./Images/laptop.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('./Images/bg.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: bottom left;
   background-repeat: no-repeat;
   height: 90vh;
+}
+
+.credit {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 1vmin;
+  color: var(--eggshell);
+  font-size: smaller;
+}
+
+.credit a {
+  color: var(--eggshell);
 }
 
 .hero-text-container {
@@ -106,7 +128,7 @@ body, html {
 .hero-text {
   text-align: center;
   padding: 3vmin;
-  color: var(--dark);
+  color: black;
   font-family: var(--main-font);
   font-size: 2vmin;
   line-height: 2vmax;
@@ -133,7 +155,6 @@ body, html {
 
 .project {
   height: 100vh;
-  background-color: var(--orange);
 }
 
 .project-img {
@@ -191,16 +212,14 @@ body, html {
 
 .project-desc-text {
   grid-area: desc;
-  height: 35vh;
-  width: 15vw;
+  place-content: center;
+
 }
 .project-list {
   grid-area: list;
   display: grid;
   align-items: end;
   justify-content: center;
-  height: 45vh;
-  width: 15vw;
   margin: 30px;
   padding: 0 25px;
   list-style: none;
@@ -216,8 +235,9 @@ body, html {
 .tooltip .tooltiptext {
   visibility: hidden;
   /* width: 120px; */
-  background-color: var(--dark);
-  color: var(--light);
+  background-color: var(--independence);
+  /* background-color: #000000; */
+  color: var(--eggshell);
   text-align: center;
   padding: 10px;
   border-radius: 6px;
@@ -239,7 +259,7 @@ body, html {
   margin-top: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent transparent transparent var(--dark);
+  border-color: transparent transparent transparent var(--independence);
 }
 
 .project-list img {
@@ -256,15 +276,16 @@ body, html {
 
 .text-box {
   display: grid;
-  place-content: center;
+  font-family: var(--main-font);
   list-style: none;
   text-align: center;
   background: rgba(255, 255, 255, 0.6);
-  margin: 30px;
+  margin: 20px;
   padding: 0 25px;
   border-radius: 5px;
-  height: 35vh;
-  width: 15vw;
+  height: 45vmin;
+  width: 20vmin;
+  font-size: 1.5vmin;
 }
 
 .takeaway {
@@ -277,11 +298,16 @@ body, html {
 
 .spliter {
   position: relative;
+  font-family: var(--heading-font);
   display: grid;
   place-content: center;
-  background-color: var(--red);
+  background-color: var(--independence);
+  /* background-color: #000000; */
+
+  color: var(--eggshell);
   width: 100%;
   height: 15vh;
+  font-size: 2vh;
 }
 
 .spliter h1 {}
@@ -291,20 +317,18 @@ body, html {
 
 footer {
   position: relative;
-  background-color: var(--red);
-  height: 100%;
-}
+  background-color: var(--independence);
+  /* background-color: #000000; */
 
-/* .footer-content {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-areas: 
-  ". contact ."
-  ". contact ."
-  ". . .";
-  padding-top: var(--nav-bar-height);
-} */
+  color: var(--dark);
+  height: 100%;
+
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('./Images/bg.jpg');
+  background-size: cover;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  height: 90vh; */
+}
 
 .contact {
   display: grid;
@@ -322,6 +346,7 @@ footer {
 }
 
 .contact-heading {
+  color: var(--eggshell);
   grid-area: h;
   display: block;
   font-size: larger;
@@ -337,7 +362,6 @@ footer {
   white-space: nowrap;
   padding: 10px;
   border-radius: 5px;
-  /* justify-content: center; */
 }
 
 .logo {
@@ -347,9 +371,9 @@ footer {
 
 .social-link {
   text-decoration: none;
-  color: var(--dark);
+  color: var(--eggshell);
   transition: all .3s;
-  background: linear-gradient(to right, var(--orange), var(--orange)) no-repeat;
+  background: linear-gradient(to right, var(--terra-cotta), var(--terra-cotta)) no-repeat;
   background-size: 2vw 3px;
   background-position: left bottom;
   padding: 0 0 10px 5px;
